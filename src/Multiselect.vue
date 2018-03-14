@@ -62,7 +62,7 @@
         </span>
         <span v-if="isPlaceholderVisible" @mousedown.prevent="toggle">
           <slot name="placeholder">
-            <span class="multiselect__single">
+            <span class="multiselect__single multiselect__input-placeholder">
               {{ placeholder }}
             </span>
           </slot>
@@ -306,7 +306,7 @@
       inputStyle () {
         if (this.multiple && this.value && this.value.length) {
           // Hide input by setting the width to 0 allowing it to receive focus
-          return this.isOpen ? { 'width': 'auto' } : { 'width': '0', 'position': 'absolute' }
+          return this.isOpen ? { 'width': 'auto' } : { 'width': '0', 'position': 'absolute', 'padding': '0' }
         }
       },
       contentStyle () {

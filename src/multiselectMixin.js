@@ -395,7 +395,7 @@ export default {
      * @returns {Array} returns the internal value
      */
     getInternalValue (value) {
-      return value === null || value === undefined
+      return value === null || value === undefined || value === ''
         ? []
         : this.multiple
           ? deepClone(value)
